@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POPpic", "POPpic\POPpic.csproj", "{0B0A97D6-DEE3-473C-A0CF-48A3C3FCD9B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POPpicLibrary", "POPpicLibrary\POPpicLibrary.csproj", "{8154DEF0-CC78-4842-AF8D-5C7F9468A250}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buddy.Android", "Buddy-DotNet-SDK-master\src\Buddy.Android.csproj", "{6051EF7E-1A39-4C5C-A06B-82A9A2B5304F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Facebook", "Xamarin.Facebook\Xamarin.Facebook.csproj", "{33B8DF4F-E480-4B97-8DA1-BEB89CA6B644}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +19,18 @@ Global
 		{0B0A97D6-DEE3-473C-A0CF-48A3C3FCD9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B0A97D6-DEE3-473C-A0CF-48A3C3FCD9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B0A97D6-DEE3-473C-A0CF-48A3C3FCD9B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33B8DF4F-E480-4B97-8DA1-BEB89CA6B644}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33B8DF4F-E480-4B97-8DA1-BEB89CA6B644}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33B8DF4F-E480-4B97-8DA1-BEB89CA6B644}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33B8DF4F-E480-4B97-8DA1-BEB89CA6B644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6051EF7E-1A39-4C5C-A06B-82A9A2B5304F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6051EF7E-1A39-4C5C-A06B-82A9A2B5304F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6051EF7E-1A39-4C5C-A06B-82A9A2B5304F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6051EF7E-1A39-4C5C-A06B-82A9A2B5304F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8154DEF0-CC78-4842-AF8D-5C7F9468A250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8154DEF0-CC78-4842-AF8D-5C7F9468A250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8154DEF0-CC78-4842-AF8D-5C7F9468A250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8154DEF0-CC78-4842-AF8D-5C7F9468A250}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = POPpic\POPpic.csproj

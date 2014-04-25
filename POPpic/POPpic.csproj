@@ -45,21 +45,191 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="AndHUD">
+      <HintPath>..\Components\AndHUD-1.3.1\lib\android\AndHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Auth.Android">
+      <HintPath>..\Components\xamarin.auth-1.2.2\lib\android\Xamarin.Auth.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="GCM.Client">
+      <HintPath>..\Components\GCMClient-1.0\lib\android\GCM.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7.1\lib\android\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\Components\facebook-sdk-6.2.1\lib\android\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android.Support.v4">
+      <HintPath>..\..\..\..\..\..\..\Program Files %28x86%29\Reference Assemblies\Microsoft\Framework\MonoAndroid\v4.0\Mono.Android.Support.v4.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainActivity.cs" />
-    <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AndroidUtilities.cs" />
+    <Compile Include="BalloonBackgroundView.cs" />
+    <Compile Include="CreateGameActivity.cs" />
+    <Compile Include="GameplayActivity.cs" />
+    <Compile Include="GameSetupFragment.cs" />
+    <Compile Include="HelloFacebookSampleActivity.cs" />
+    <Compile Include="MyGamesActivity.cs" />
+    <Compile Include="MyGamesTabbedActivity.cs" />
+    <Compile Include="MyTrophiesActivity.cs" />
+    <Compile Include="MyTrophiesFullSizeGalleryActivity.cs" />
+    <Compile Include="MyTrophiesGalleryFragment.cs" />
+    <Compile Include="MyTrophyFullSizeGalleryFragment.cs" />
+    <Compile Include="PopPicApplication.cs" />
+    <Compile Include="PushService.cs" />
+    <Compile Include="SelectFacebookFriendFragment.cs" />
+    <Compile Include="SelectFriendActivity.cs" />
+    <Compile Include="SelectFriendSourceFragment.cs" />
+    <Compile Include="SplashScreen.cs" />
+    <Compile Include="SquareRelativeLayout.cs" />
+    <Compile Include="ListAdapters\AndroidFriendListAdapter.cs" />
+    <Compile Include="ListAdapters\AndroidGameListAdapter.cs" />
+    <Compile Include="ListAdapters\AndroidMyTrophiesThumbnailAdapter.cs" />
+    <Compile Include="ListAdapters\AndroidSelectFriendSourceListAdapter.cs" />
+    <Compile Include="ListAdapters\AndroidSelectGameImageryListAdapter.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
+    <None Include="HelloFacebookSampleActivity_GraphObjectWithId.java" />
+    <None Include="popPIC Android.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
-    <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\drawable\balloon.png" />
+    <AndroidResource Include="Resources\drawable\balloonbackground.jpg" />
+    <AndroidResource Include="Resources\drawable\balloonbackground_small.jpg" />
+    <AndroidResource Include="Resources\drawable\GameListItemBackground.xml" />
+    <AndroidResource Include="Resources\drawable\ImageryGalleryBackground.xml" />
+    <AndroidResource Include="Resources\drawable\LoserPictureBorder.xml" />
+    <AndroidResource Include="Resources\drawable\MyGamesListViewBackground.xml" />
+    <AndroidResource Include="Resources\drawable\popImage.png" />
+    <AndroidResource Include="Resources\drawable\UserInfoBorder.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\balloon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\balloonbackground.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\balloon_blue.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\balloon_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\balloon_green.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\balloon_orange.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\facebook_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_expand.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_new.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_next_item.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_refresh.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_view_as_grid.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\outerspace.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\balloon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\balloonbackground.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\balloon_blue.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\balloon_gray.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\balloon_green.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\balloon_orange.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\facebook_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_view_as_grid.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\outerspace.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\balloon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\balloonbackground.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\balloon_blue.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\balloon_gray.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\balloon_green.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\balloon_orange.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\facebook_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_view_as_grid.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\outerspace.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\balloon_blue.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\balloon_gray.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\balloon_green.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\balloon_orange.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\facebook_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_view_as_grid.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\outerspace.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\layout\BalloonOverlayLayout.axml" />
+    <AndroidResource Include="Resources\layout\CreateGameLayout.axml" />
+    <AndroidResource Include="Resources\layout\FriendListItemLayout.axml" />
+    <AndroidResource Include="Resources\layout\GameImageryLayout.axml" />
+    <AndroidResource Include="Resources\layout\GameListItemLayout.axml" />
+    <AndroidResource Include="Resources\layout\GameOverOverLayLayout.axml" />
+    <AndroidResource Include="Resources\layout\GameplayLayout.axml" />
+    <AndroidResource Include="Resources\layout\GameSetupFragmentLayout.axml" />
+    <AndroidResource Include="Resources\layout\GamesListDividerItem.axml" />
+    <AndroidResource Include="Resources\layout\loginPage.xml" />
+    <AndroidResource Include="Resources\layout\MyGamesLayout.axml" />
+    <AndroidResource Include="Resources\layout\MyGamesListView.axml" />
+    <AndroidResource Include="Resources\layout\MyTrophiesFragmentLayout.axml" />
+    <AndroidResource Include="Resources\layout\MyTrophiesFullSizeImageLayout.axml" />
+    <AndroidResource Include="Resources\layout\MyTrophiesGalleryThumbnailLayout.axml" />
+    <AndroidResource Include="Resources\layout\MyTrophiesLayout.axml" />
+    <AndroidResource Include="Resources\layout\SelectFriendLayout.axml" />
+    <AndroidResource Include="Resources\layout\SelectFriendSourceLayout.axml" />
+    <AndroidResource Include="Resources\layout\SplashScreenLayout.axml" />
+    <AndroidResource Include="Resources\layout\UserInfoBoxLayout.axml" />
+    <AndroidResource Include="Resources\menu\MyGamesMenu.xml" />
+    <AndroidResource Include="Resources\raw\aria02.ogg" />
+    <AndroidResource Include="Resources\raw\BalloonPop.ogg" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Xamarin.Facebook\Xamarin.Facebook.csproj">
+      <Project>{33B8DF4F-E480-4B97-8DA1-BEB89CA6B644}</Project>
+      <Name>Xamarin.Facebook</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\POPpicLibrary\POPpicLibrary.csproj">
+      <Project>{8154DEF0-CC78-4842-AF8D-5C7F9468A250}</Project>
+      <Name>POPpicLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Buddy-DotNet-SDK-master\src\Buddy.Android.csproj">
+      <Project>{6051EF7E-1A39-4C5C-A06B-82A9A2B5304F}</Project>
+      <Name>Buddy.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="AndHUD">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>1.3.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin.auth">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>1.2.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="json.net">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>4.5.11</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="GCMClient">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>1.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin.mobile">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>0.7.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="facebook-sdk">
+      <InstallationInProgress>True</InstallationInProgress>
+      <Version>6.2.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
 </Project>

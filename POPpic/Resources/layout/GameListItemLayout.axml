@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/myGameListItemLayout"
+    android:background="@drawable/GameListItemBackground"
+    android:focusable="false"
+    android:descendantFocusability="blocksDescendants">
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageView1"
+        android:layout_centerVertical="true"
+        android:minWidth="70dp"
+        android:minHeight="70dp"
+        android:maxWidth="70dp"
+        android:maxHeight="70dp"
+        android:padding="10dp" />
+    <ImageView
+        android:src="@drawable/ic_action_next_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:minWidth="5dp"
+        android:minHeight="5dp"
+        android:maxWidth="5dp"
+        android:maxHeight="5dp" />
+    <RelativeLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1"
+        android:layout_toRightOf="@+id/imageView1"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imageView2">
+        <TextView
+            android:text="User Name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:layout_toRightOf="@+id/imageView1"
+            android:layout_alignParentTop="true" />
+        <TextView
+            android:text="1 second"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/textView1" />
+        <TextView
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/textView1"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/view_trophies"
+          android:icon="@drawable/ic_action_view_as_grid"
+          android:title="@string/my_trophies"
+          android:showAsAction="ifRoom"/>
+	<item android:id="@+id/refresh_games"
+          android:icon="@drawable/ic_action_refresh"
+          android:title="@string/refresh_games"
+          android:showAsAction="ifRoom"/>
+    <item android:id="@+id/create_game"
+          android:icon="@drawable/ic_action_new"
+          android:title="@string/create_game"
+          android:showAsAction="ifRoom"/>
+
+
+</menu>
