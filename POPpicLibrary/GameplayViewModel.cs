@@ -24,10 +24,12 @@ namespace POPpicLibrary
 		public string PlayerName1{ get { return this.requester.Name; } }
 		public string PlayerProfileImage1 { get { return (this.requester.ProfilePicture ?? new Uri("http://www.artifacting.com/blog/wp-content/uploads/2010/11/Abe_Lincoln.jpg")).ToString (); } }
 		public string PlayerTime1 { get { return FormattingUtilities.FormatMilliseconds (this.playerTime1 + playerAddedTime1, false); } }
+		public User Player1 { get { return this.requester; } }
 
 		public string PlayerName2{ get { return this.responder.Name; } }
 		public string PlayerProfileImage2 { get { return (this.responder.ProfilePicture ??  new Uri("http://www.artifacting.com/blog/wp-content/uploads/2010/11/Abe_Lincoln.jpg")).ToString (); } }
 		public string PlayerTime2 { get { return FormattingUtilities.FormatMilliseconds (this.playerTime2 + playerAddedTime2, false); } }
+		public User Player2 { get { return this.responder; } }
 
 		public string BottomHintText { get { 
 				string text = "Not in valid state";
@@ -52,6 +54,8 @@ namespace POPpicLibrary
 
 		public int BalloonDimension { get { return (int) ComputeBalloonDimension(this.totalElapsedStart + this.totalElapsedSession, this.balloonContainerDimension); } }
 		public double BalloonPercentage { get { return ComputeBalloonDimension (this.totalElapsedStart + this.totalElapsedSession, 1); } }
+		public double TargetBalloonSizePercentage { get { return ComputeBalloonDimension (this.model.TotalDuration, 1); } }
+		public long TimeRemainingAtStart { get { return this.model.TotalDuration - this.totalElapsedStart; } }
 
 		public string GameGUID { get { return this.model.GameGUID; } }
 		public POPpicLibrary.GameState GameState { get { return this.model.State; } }
@@ -68,6 +72,11 @@ namespace POPpicLibrary
 			this.model = model;
 			this.repository = repository;
 			this.stopWatch = new Stopwatch ();
+			this.balloonContainerDimension = balloonContainerHeight < balloonContainerWidth ? balloonContainerHeight : balloonContainerWidth;
+		}
+
+		public void SetDimensions(double balloonContainerHeight, double balloonContainerWidth)
+		{
 			this.balloonContainerDimension = balloonContainerHeight < balloonContainerWidth ? balloonContainerHeight : balloonContainerWidth;
 		}
 
@@ -98,6 +107,8 @@ namespace POPpicLibrary
 			return percent * dimension;
 		}
 
+		public float TargetAlpha { get { return 0.4f; } }
+		public float CurrentAlpha { get { return 1.0f - ((1.0f - TargetAlpha) * (float) BalloonPercentage); } }
 
 
 

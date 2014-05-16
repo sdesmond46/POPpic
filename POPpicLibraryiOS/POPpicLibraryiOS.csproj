@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C696122-F204-4646-A284-49A9F4F85363}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>POPpicLibraryiOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>POPpicLibraryiOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="Facebook">
+      <HintPath>..\Components\facebook-sdk-6.2.1\lib\ios\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Components\json.net-4.5.11\lib\ios\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="..\POPpicLibrary\FormattingUtilities.cs">
+      <Link>FormattingUtilities.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\FriendViewModel.cs">
+      <Link>FriendViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\GameImageryItemViewModel.cs">
+      <Link>GameImageryItemViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\GameImageryRepository.cs">
+      <Link>GameImageryRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\GameModel.cs">
+      <Link>GameModel.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\GameMoveModel.cs">
+      <Link>GameMoveModel.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\GameplayViewModel.cs">
+      <Link>GameplayViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\GameRepository.cs">
+      <Link>GameRepository.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\GameSetupViewModel.cs">
+      <Link>GameSetupViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\GameViewModel.cs">
+      <Link>GameViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\ImageProduct.cs">
+      <Link>ImageProduct.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\MyGamesViewModel.cs">
+      <Link>MyGamesViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\MyTrophiesViewModel.cs">
+      <Link>MyTrophiesViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\PlatformSpecificOperations.cs">
+      <Link>PlatformSpecificOperations.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\PopPicConstants.cs">
+      <Link>PopPicConstants.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\PopPicImageCache.cs">
+      <Link>PopPicImageCache.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\PushNotificationData.cs">
+      <Link>PushNotificationData.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\SelectFriendSourceViewModel.cs">
+      <Link>SelectFriendSourceViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\SelectFriendViewModel.cs">
+      <Link>SelectFriendViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\POPpicLibrary\UserExtraData.cs">
+      <Link>UserExtraData.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Buddy-DotNet-SDK-master\src\Buddy.iOS.csproj">
+      <Project>{6CDE8A47-1F4D-489D-B06B-7C334C76886A}</Project>
+      <Name>Buddy.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="facebook-sdk">
+      <Version>6.2.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="json.net">
+      <Version>4.5.11</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+</Project>

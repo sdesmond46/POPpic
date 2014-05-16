@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <AssemblyName>POPpic</AssemblyName>
-    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -54,17 +54,17 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="GCM.Client">
-      <HintPath>..\Components\GCMClient-1.0\lib\android\GCM.Client.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Mobile">
       <HintPath>..\Components\xamarin.mobile-0.7.1\lib\android\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="GCM.Client">
+      <HintPath>..\Components\GCMClient-1.0\lib\android\GCM.Client.dll</HintPath>
     </Reference>
     <Reference Include="Facebook">
       <HintPath>..\Components\facebook-sdk-6.2.1\lib\android\Facebook.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android.Support.v4">
-      <HintPath>..\..\..\..\..\..\..\Program Files %28x86%29\Reference Assemblies\Microsoft\Framework\MonoAndroid\v4.0\Mono.Android.Support.v4.dll</HintPath>
+      <HintPath>..\..\..\..\Library\Frameworks\Xamarin.Android.framework\Versions\Current\lib\mandroid\platforms\android-4\Mono.Android.Support.v4.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -187,10 +187,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Xamarin.Facebook\Xamarin.Facebook.csproj">
-      <Project>{33B8DF4F-E480-4B97-8DA1-BEB89CA6B644}</Project>
-      <Name>Xamarin.Facebook</Name>
-    </ProjectReference>
     <ProjectReference Include="..\POPpicLibrary\POPpicLibrary.csproj">
       <Project>{8154DEF0-CC78-4842-AF8D-5C7F9468A250}</Project>
       <Name>POPpicLibrary</Name>
@@ -199,36 +195,34 @@
       <Project>{6051EF7E-1A39-4C5C-A06B-82A9A2B5304F}</Project>
       <Name>Buddy.Android</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\GitHub\monodroid-samples\Facebook\Xamarin.Facebook\Xamarin.Facebook.csproj">
+      <Project>{33B8DF4F-E480-4B97-8DA1-BEB89CA6B644}</Project>
+      <Name>Xamarin.Facebook</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="AndHUD">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>1.3.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
     <XamarinComponentReference Include="xamarin.auth">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>1.2.2</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
     <XamarinComponentReference Include="json.net">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>4.5.11</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
     <XamarinComponentReference Include="GCMClient">
-      <InstallationInProgress>True</InstallationInProgress>
       <Version>1.0</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
-    <XamarinComponentReference Include="xamarin.mobile">
-      <InstallationInProgress>True</InstallationInProgress>
-      <Version>0.7.1</Version>
+    <XamarinComponentReference Include="facebook-sdk">
+      <Version>6.2.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
-    <XamarinComponentReference Include="facebook-sdk">
-      <InstallationInProgress>True</InstallationInProgress>
-      <Version>6.2.1</Version>
+    <XamarinComponentReference Include="xamarin.mobile">
+      <Version>0.7.1</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>

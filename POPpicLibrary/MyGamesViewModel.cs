@@ -70,7 +70,18 @@ namespace POPpicLibrary
 		public bool Initialized { get; private set; }
 		private IList<GameViewModel> myGames;
 
+		public static string GetGameTypeDescription(ListType listType) {
+			switch (listType) {
+			case ListType.MY_TURN:
+				return "Your Turn";
+			case ListType.THEIR_TURN:
+				return "Their Turn";
+			case ListType.COMPLETED:
+				return "Completed";
+			}
 
+			return "";
+		}
 
 		public IList<GameViewModel> GetMyGames(ListType type)
 		{

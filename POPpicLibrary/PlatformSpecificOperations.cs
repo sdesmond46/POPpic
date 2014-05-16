@@ -1,11 +1,16 @@
-﻿using System;
+﻿
+using System;
 using System.IO;
+
+#if __ANDROID__
 using Android.Graphics;
+#endif
 
 namespace POPpicLibrary
 {
 	public class PlatformSpecificOperations
 	{
+		#if __ANDROID__
 		public static Stream CreateProfilePicture(Stream imageStream) {
 			imageStream.Seek (0, SeekOrigin.Begin);
 			var originalBmp = BitmapFactory.DecodeStream (imageStream);
@@ -36,10 +41,11 @@ namespace POPpicLibrary
 			memStream.Seek (0, SeekOrigin.Begin);
 			return memStream;
 		}
-
-		public PlatformSpecificOperations ()
-		{
+		#endif
+		#if __IOS__
+		public static Stream CreateProfilePicture(Stream imageStream) {
+			return null;
 		}
+		#endif
 	}
 }
-

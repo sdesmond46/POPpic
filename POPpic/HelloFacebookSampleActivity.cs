@@ -40,6 +40,7 @@ namespace POPpic
 			callback = new MyStatusCallback (this);
 		}
 
+		
 		private LoginButton loginButton;
 		private TextView greeting;
 		private IGraphUser user;
