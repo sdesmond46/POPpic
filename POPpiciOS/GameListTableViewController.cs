@@ -38,12 +38,33 @@ namespace POPpiciOS
 		{
 			base.ViewDidLoad ();
 
-			this.TabBarController.TabBar.Hidden = false;
+			// this.TabBarController.TabBar.Hidden = false;
 
 			var addButton = new UIBarButtonItem (UIBarButtonSystemItem.Add);
-			addButton.Clicked += (s, ev) =>  Console.WriteLine("Button Clicked!");
-			var trophyButton = new UIBarButtonItem (UIBarButtonSystemItem.Action);
+			addButton.Clicked += (s, ev) => {
+				var selectFriendViewModel = new SelectFriendSourceViewModel (AppDelegate.Repository);
+				BTProgressHUD.Show ("Loading", -1, ProgressHUD.MaskType.Black);
+				selectFriendViewModel.InitializeAsync ().ContinueWith (t => {
+					InvokeOnMainThread (() => {
+						BTProgressHUD.Dismiss ();
+						var selectFriendViewController = new SelectFriendDialogViewController (selectFriendViewModel);
+						this.NavigationController.PushViewController (selectFriendViewController, true);
+					});
+				});
+			};
+
+			// var trophyButton = new UIBarButtonItem (UIBarButtonSystemItem.Action);
+			var trophyImage = UIImage.FromBundle ("trophyIcon.png");
+			var trophyButton = new UIBarButtonItem(trophyImage, UIBarButtonItemStyle.Plain, null);
 			trophyButton.Clicked += (s, ev) => {
+				var layout = new UICollectionViewFlowLayout();
+				layout.SectionInset = new UIEdgeInsets(5, 5, 5, 5);
+				layout.MinimumInteritemSpacing = 5;
+				layout.MinimumLineSpacing = 5;
+				layout.ItemSize = new System.Drawing.SizeF(100, 100);
+				var trophiesController = new TrophiesCollectionViewControllerController(
+					layout);
+				this.NavigationController.PushViewController(trophiesController, true);
 			};
 
 			this.NavigationItem.RightBarButtonItems = new UIBarButtonItem[] {
@@ -52,6 +73,21 @@ namespace POPpiciOS
 			};
 
 			this.TableView.Source = tableSource;
+		}
+
+
+		public override void ViewDidAppear (bool animated)
+		{
+			base.ViewDidAppear (animated);
+
+			this.TabBarController.TabBar.Hidden = false;
+		}
+
+		public override void ViewWillDisappear (bool animated)
+		{
+			base.ViewWillDisappear (animated);
+
+			this.TabBarController.TabBar.Hidden = true;
 		}
 
 		public void SetData(IList<GameViewModel> games) {

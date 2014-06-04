@@ -35,11 +35,14 @@ namespace POPpicLibrary
 		public MyTrophiesViewModel(GameRepository repository)
 		{
 			this.repository = repository;
+			IsInitialized = false;
 		}
 
+		public bool IsInitialized { get; set; }
 		public async Task<bool> InitializeAsync() {
 			this.MyBuddyPictures = await this.repository.GetMyWinnerPicturesAsync ();
 			this.MyPictures = this.MyBuddyPictures.Select (item => new BuddyPictureModel (item)).ToList();
+			IsInitialized = true;
 			return true;
 		}
 	}

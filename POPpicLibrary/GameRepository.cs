@@ -197,6 +197,12 @@ namespace POPpicLibrary
 			return messageResult && metadata;
 		}
 
+		public Task<IList<User>> GetRecentOpponentsAsync()
+		{
+			// TODO: Actually implement this
+			return GetMyFriendsFQLAsync ();
+		}
+
 		public async Task<IList<User>> GetMyFriendsFQLAsync()
 		{
 			var query = @"SELECT uid FROM user WHERE is_app_user = '1' AND uid IN (SELECT uid2 FROM friend WHERE uid1 = me())";
@@ -262,18 +268,6 @@ namespace POPpicLibrary
 			}
 			return await this.buddyUser.FindUserAsync (id);
 		}
-
-//		public async Task<long> UploadLoserPhotoAsync(Stream photoStream, string message, string gameGUID, User opponentUserModel, out Picture picture) {
-//			var userExtraData = JsonConvert.DeserializeObject<UserExtraData> (this.buddyUser.ApplicationTag);
-//			var opponentExtraData = JsonConvert.DeserializeObject<UserExtraData> (opponentUserModel.ApplicationTag);
-//
-//			var album = await this.buddyUser.PhotoAlbums.GetAsync (userExtraData.UploadAlbumId);
-//			picture = await album.AddPictureAsync (photoStream, message, 0, 0, gameGUID);
-//			var virtualAlbum = await buddyUser.VirtualAlbums.GetAsync (opponentExtraData.WinnerAblumVirtualId);
-//			var imageId = await virtualAlbum.AddPictureAsync (picture);
-//
-//			return imageId;
-//		}
 
 		private string GetMetadataString(IList<string> ids, ref int endIndex)
 		{

@@ -11,14 +11,16 @@ namespace POPpicLibrary
 		public SelectFriendViewModel (GameRepository repository)
 		{
 			this.repository = repository;
+			this.PageTitle = "Facebook Friends";
 		}
 
 		private IList<User> users;
 		public IList<FriendViewModel> Friends;
-		public bool Initialized { get; private set;}
+		public bool IsInitialized { get; private set;}
+		public string PageTitle { get; set; }
 		public async Task<bool> InitializeAsync()
 		{
-			Initialized = false;
+			IsInitialized = false;
 			users = await this.repository.GetMyFriendsFQLAsync ();
 			var friendList = new List<FriendViewModel> ();
 			foreach (var user in users) {
@@ -28,8 +30,8 @@ namespace POPpicLibrary
 
 			this.Friends = friendList;
 
-			Initialized = true;
-			return Initialized;
+			IsInitialized = true;
+			return IsInitialized;
 		}
 
 		public static string SelectedFriendKey = "SELECTED_FRIEND";

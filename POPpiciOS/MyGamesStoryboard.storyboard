@@ -91,11 +91,11 @@
             </objects>
             <point key="canvasLocation" x="757" y="1385"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - Completed-->
         <scene sceneID="XUT-wf-u7z">
             <objects>
                 <navigationController definesPresentationContext="YES" id="gqn-qW-qpo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="SBW-Nt-eOH"/>
+                    <tabBarItem key="tabBarItem" title="Completed" image="completedGameIcon.png" id="SBW-Nt-eOH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OXV-XJ-5nX">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -163,11 +163,11 @@
             </objects>
             <point key="canvasLocation" x="428" y="2161"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - Their Turn-->
         <scene sceneID="Z62-53-Fns">
             <objects>
                 <navigationController definesPresentationContext="YES" id="aOi-zs-OqO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="MrT-RK-WhA"/>
+                    <tabBarItem key="tabBarItem" title="Their Turn" image="theirTurnIcon.png" id="MrT-RK-WhA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BDo-ae-yMo">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -179,11 +179,11 @@
             </objects>
             <point key="canvasLocation" x="237" y="657"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - My Turn-->
         <scene sceneID="KVQ-fL-iXP">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Enj-gN-soA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="topRated" id="Z1X-dQ-kWH"/>
+                    <tabBarItem key="tabBarItem" title="My Turn" image="myTurnIcon.png" id="Z1X-dQ-kWH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="15b-LK-Zam">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -217,6 +217,11 @@
             <point key="canvasLocation" x="-297" y="654"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="completedGameIcon.png" width="30" height="30"/>
+        <image name="myTurnIcon.png" width="30" height="30"/>
+        <image name="theirTurnIcon.png" width="30" height="30"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

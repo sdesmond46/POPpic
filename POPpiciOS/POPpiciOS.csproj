@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{652F86DA-0DB1-4E63-B9E1-21EB68951488}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>POPpiciOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>POPpiciOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="MonoTouch.FacebookConnect">
+      <HintPath>..\Components\facebookios-3.13.1\lib\ios\MonoTouch.FacebookConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\Components\facebook-sdk-6.2.1\lib\ios\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="BTProgressHUD">
+      <HintPath>..\Components\btprogresshud-1.9\lib\ios\BTProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7.1\lib\ios\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Auth.iOS">
+      <HintPath>..\Components\xamarin.auth-1.2.2\lib\ios\Xamarin.Auth.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.1.0.6186\lib\MonoTouch10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.1.0.6186\lib\MonoTouch10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.1.0.6186\lib\MonoTouch10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\.DS_Store" />
+    <BundleResource Include="Resources\balloon_orange.png" />
+    <BundleResource Include="Resources\balloonbackground.jpg" />
+    <BundleResource Include="Resources\popImage.png" />
+    <BundleResource Include="Resources\myTurnIcon%402x.png" />
+    <BundleResource Include="Resources\myTurnIcon.png" />
+    <BundleResource Include="Resources\theirTurnIcon.png" />
+    <BundleResource Include="Resources\theirTurnIcon%402x.png" />
+    <BundleResource Include="Resources\myTurnIcon_filled.png" />
+    <BundleResource Include="Resources\myTurnIcon_filled%402x.png" />
+    <BundleResource Include="Resources\theirTurnIcon_filled.png" />
+    <BundleResource Include="Resources\theirTurnIcon_filled%402x.png" />
+    <BundleResource Include="Resources\completedGameIcon.png" />
+    <BundleResource Include="Resources\completedGameIcon%402x.png" />
+    <BundleResource Include="Resources\completedGameIcon_filled.png" />
+    <BundleResource Include="Resources\completedGameIcon_filled%402x.png" />
+    <BundleResource Include="Resources\unknownUserImage_50.png" />
+    <BundleResource Include="Resources\unknownUserImage_50%402x.png" />
+    <BundleResource Include="Resources\facebook_icon.png" />
+    <BundleResource Include="Resources\facebook_icon%402x.png" />
+    <BundleResource Include="Resources\trophyIcon.png" />
+    <BundleResource Include="Resources\trophyIcon%402x.png" />
+    <BundleResource Include="Resources\randomUserIcon.png" />
+    <BundleResource Include="Resources\randomUserIcon%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="MyGamesTabBarController.cs" />
+    <Compile Include="MyGamesTabBarController.designer.cs">
+      <DependentUpon>MyGamesTabBarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DVCGameListMyTurn.cs" />
+    <Compile Include="DVCGameListMyTurn.designer.cs">
+      <DependentUpon>DVCGameListMyTurn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DVCGameListTheirTurn.cs" />
+    <Compile Include="DVCGameListTheirTurn.designer.cs">
+      <DependentUpon>DVCGameListTheirTurn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DVCGameListCompleted.cs" />
+    <Compile Include="DVCGameListCompleted.designer.cs">
+      <DependentUpon>DVCGameListCompleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DVCGames.cs" />
+    <Compile Include="DVCGames.designer.cs">
+      <DependentUpon>DVCGames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DVCAccount.cs" />
+    <Compile Include="DVCAccount.designer.cs">
+      <DependentUpon>DVCAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestTVC.cs" />
+    <Compile Include="TestTVC.designer.cs">
+      <DependentUpon>TestTVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameListTableSource.cs" />
+    <Compile Include="GameListTableViewController.cs" />
+    <Compile Include="GameListTableViewController.designer.cs">
+      <DependentUpon>GameListTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameplayViewController.cs" />
+    <Compile Include="GameplayViewController.designer.cs">
+      <DependentUpon>GameplayViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameplayView.cs" />
+    <Compile Include="GameplayView.designer.cs">
+      <DependentUpon>GameplayView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameplayControlsOverlayView.cs" />
+    <Compile Include="GameplayControlsOverlayView.designer.cs">
+      <DependentUpon>GameplayControlsOverlayView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppDelegate.designer.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreenViewController.cs" />
+    <Compile Include="SplashScreenViewController.designer.cs">
+      <DependentUpon>SplashScreenViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOSUtilities.cs" />
+    <Compile Include="TrophiesCollectionViewControllerController.cs" />
+    <Compile Include="TrophiesCollectionViewControllerCell.cs" />
+    <Compile Include="TrophiesFullSizeViewController.cs" />
+    <Compile Include="TrophiesFullSizeViewController.designer.cs">
+      <DependentUpon>TrophiesFullSizeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrophiesGalleryViewController.cs" />
+    <Compile Include="SelectFriendDialogViewController.cs" />
+    <Compile Include="SelectFacebookFriendDialogViewController.cs" />
+    <Compile Include="GameSetupDialogViewController.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <XamarinComponentReference Include="facebookios">
+      <Version>3.13.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="facebook-sdk">
+      <Version>6.2.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="btprogresshud">
+      <Version>1.9</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin.mobile">
+      <Version>0.7.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin.auth">
+      <Version>1.2.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="TestStoryboard.storyboard" />
+    <InterfaceDefinition Include="MyGamesStoryboard.storyboard" />
+    <InterfaceDefinition Include="TestTVC.xib" />
+    <InterfaceDefinition Include="GameplayStoryboard.storyboard" />
+    <InterfaceDefinition Include="GameplayControlsView.xib" />
+    <InterfaceDefinition Include="SplashScreenStoryboard.storyboard" />
+    <InterfaceDefinition Include="TrophiesFullSizeStoryboard.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\POPpicLibraryiOS\POPpicLibraryiOS.csproj">
+      <Project>{8C696122-F204-4646-A284-49A9F4F85363}</Project>
+      <Name>POPpicLibraryiOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Buddy-DotNet-SDK-master\src\Buddy.iOS.csproj">
+      <Project>{6CDE8A47-1F4D-489D-B06B-7C334C76886A}</Project>
+      <Name>Buddy.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FormsLibrary\FormsLibrary.csproj">
+      <Project>{BB97822A-2CBF-4948-8513-96A6C632AED1}</Project>
+      <Name>FormsLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

@@ -19,14 +19,20 @@ namespace POPpicLibrary
 		public async Task<IList<GameImageryItemViewModel>> GetBalloonImagesAsync() 
 		{
 			var results = await GetImagesAsync (ImageryType.BALLOON);
+			DefaultBallon = results.First ();
 			return results;
 		}
+
+		public GameImageryItemViewModel DefaultBallon { get; private set; }
 
 		public async Task<IList<GameImageryItemViewModel>> GetBackgroundImagesAsync() 
 		{
 			var results = await GetImagesAsync (ImageryType.BALLOON_BACKGROUND);
+			DefaultBackground = results.First ();
 			return results;
 		}
+
+		public GameImageryItemViewModel DefaultBackground { get; private set; }
 
 		private async Task<IList<GameImageryItemViewModel>> GetImagesAsync(ImageryType imageType)
 		{

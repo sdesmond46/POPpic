@@ -6,6 +6,7 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using POPpicLibrary;
 using System.Collections.Generic;
+using BigTed;
 
 namespace POPpiciOS
 {
@@ -25,12 +26,17 @@ namespace POPpiciOS
 		{
 			base.ViewDidLoad ();
 
+			this.TabBar.Items [0].SelectedImage = UIImage.FromBundle ("myTurnIcon_filled.png");
+			this.TabBar.Items [1].SelectedImage = UIImage.FromBundle ("theirTurnIcon_filled.png");
+			this.TabBar.Items [2].SelectedImage = UIImage.FromBundle ("completedGameIcon_filled.png");
+
 			LoadGameControllers ();
 
 			if (AppDelegate.Repository == null) {
 				GoToMyAccountScreen (true);
 			}
 		}
+
 
 		void GoToMyAccountScreen(bool returnAfterOpening) {
 			myAccountController.ReturnAfterLoading = returnAfterOpening;
@@ -59,6 +65,7 @@ namespace POPpiciOS
 		MyGamesViewModel viewModel;
 		public void InitializeMyGames() 
 		{
+			BTProgressHUD.Show ("Loading Games", -1, ProgressHUD.MaskType.Black);
 			var repository = AppDelegate.Repository;
 			if (repository != null) {
 				this.viewModel = new MyGamesViewModel (AppDelegate.Repository);
@@ -71,8 +78,11 @@ namespace POPpiciOS
 							gamesControllers[1].SetData(this.viewModel.TheirTurnGames);
 							gamesControllers[2].SetData(this.viewModel.CompletedGames);
 
+							BTProgressHUD.Dismiss();
 						});
 					}
+
+					// TODO handle error
 				});
 			}
 		}

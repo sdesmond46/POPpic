@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GLCameraRipple", "..\GitHub
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreAnimation", "..\GitHub\monotouch-samples\CoreAnimation\CoreAnimation.csproj", "{98F6ED66-B4E9-45F2-948E-5DCF19E18B24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsLibrary", "FormsLibrary\FormsLibrary.csproj", "{BB97822A-2CBF-4948-8513-96A6C632AED1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -211,6 +213,22 @@ Global
 		{98F6ED66-B4E9-45F2-948E-5DCF19E18B24}.Release|iPhone.Build.0 = Release|iPhone
 		{98F6ED66-B4E9-45F2-948E-5DCF19E18B24}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{98F6ED66-B4E9-45F2-948E-5DCF19E18B24}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Release|iPhone.Build.0 = Release|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{BB97822A-2CBF-4948-8513-96A6C632AED1}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = POPpiciOS\POPpiciOS.csproj

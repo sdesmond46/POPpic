@@ -68,6 +68,13 @@ namespace POPpiciOS
 			base.ViewDidLayoutSubviews ();
 		}
 
+		public override void ViewWillDisappear (bool animated)
+		{
+			base.ViewWillDisappear (animated);
+
+			this.TabBarController.TabBar.Hidden = false;
+		}
+
 		NSTimer timer;
 		public override void ViewDidLoad ()
 		{

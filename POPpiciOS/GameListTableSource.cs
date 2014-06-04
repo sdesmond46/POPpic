@@ -51,7 +51,7 @@ namespace POPpiciOS
 
 		public override float GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
 		{
-			var height = 90;
+			var height = 70;
 			return height;
 		}
 
